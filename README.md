@@ -1,8 +1,12 @@
+### 1. Overview
+
 This application is available on the web at:
 
 https://mars-rover-react.herokuapp.com/
 
-It is not intended as a full solution to the Mars Rover assignment.  Rather, it is an exploration of the optional creative section which allows a user to provide input over the internet, and to view the output graphically. 
+Note: This is not intended as a full solution to the Mars Rover assignment.  Rather, it is an exploration of the optional creative section which allows a user to provide input over the internet, and to view the output graphically. 
+
+### 2. Local Install
 
 To install and run this application and run it locally:
 
@@ -13,6 +17,8 @@ To install and run this application and run it locally:
     npm run start
 
 The application should run on port 3000
+
+### 3. Not responsive
 
 This application is intended for desktop usage (i.e. it is NOT responsive)
 
