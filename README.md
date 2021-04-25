@@ -23,6 +23,6 @@ The application should run on port 3000
 This application is intended for desktop usage (i.e. it is NOT responsive)
 
 It has been tested on:  
-Chrome  Version 90
+Chrome  Version 90  
 Safari  Version 14.0  
 Firefox Version 88.0  
