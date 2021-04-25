@@ -70,6 +70,8 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
 
             <h1> Mars Rover </h1>
             <h2>Plateau Extent</h2>
+            <p style={{marginTop: '-10px', fontSize: '1rem'}}>(Maximum extent = 20)</p>
+
             <label> Grid X:
                 <input type="text" placeholder={gridX} onChange={(e) => handleGridChange(e, 'X')} />
             </label>
@@ -90,7 +92,7 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
             </label>  
 
             <h2>Rover Instructions</h2>
-            <p style={{marginTop: '0'}}>(M = Move, L = Left, R = Right))</p>
+            <p style={{marginTop: '-10px', fontSize: '1rem'}}>(M = Move, L = Left, R = Right))</p>
             <label> Instructions:
                 <input type="text" placeholder={'MMLMRM'} onChange={(e) => handleRoverInstructions(e)} />
             </label>
