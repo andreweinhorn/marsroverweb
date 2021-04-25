@@ -4,11 +4,11 @@ https://mars-rover-react.herokuapp.com/
 
 To install and run this application and run it locally:
 
-mkdir marsrover
-cd marsrover
-git clone https://github.com/andreweinhorn/marsroverweb.git .
-npm install
-npm run start
+    mkdir marsrover
+    cd marsrover
+    git clone https://github.com/andreweinhorn/marsroverweb.git .
+    npm install
+    npm run start
 
 The application should run on port 3000
 
