@@ -31,3 +31,7 @@ input {
   .legend > *{
       margin: 5px;
   }
+
+  input:focus::placeholder {
+    color: transparent;
+  }

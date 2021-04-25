@@ -70,21 +70,21 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
 
             <h1> Mars Rover </h1>
 
-            <p className='user-instructions'>Enter some instructions to make the mars rover move.  For example, try entering 'MMRMM'.  This will move the rover forward two squares; then turn it 90 degrees to the right; then move it another two squares. You can also try changing the grid size and the origin of the rover. The coordinates of the rover destination are output below. Note: The grid is zero indexed.</p>
+            <p className='user-instructions'>Enter some instructions to make the mars rover move.  For example, try entering 'MMRMM'.  This will move the rover forward two squares; then turn it 90 degrees to the right; then move it another two squares. You can also try changing the grid size and the origin of the rover. The coordinates of the rover destination are output below.</p>
             
             <h2>Rover Instructions</h2>
             <p style={{marginTop: '-10px', fontSize: '1rem'}}>(M = Move, L = Left, R = Right))</p>
             <label> Instructions:
-                <input type="text" placeholder={'MMLMRM'} onChange={(e) => handleRoverInstructions(e)} />
+                <input type="text" placeholder={'e.g. MMRMM'} onChange={(e) => handleRoverInstructions(e)} />
             </label>
 
-            <h2>Plateau Extent</h2>
-            <p style={{marginTop: '-10px', fontSize: '1rem'}}>(Maximum extent = 20)</p>
+            <h2>Plateau Size</h2>
+            <p style={{marginTop: '-10px', fontSize: '1rem'}}>(Maximum size = 20)</p>
 
-            <label> Grid X:
+            <label> Max X:
                 <input type="text" placeholder={gridX} onChange={(e) => handleGridChange(e, 'X')} />
             </label>
-            <label> Grid Y:
+            <label> Max Y:
                 <input type="text" placeholder={gridY} onChange={(e) => handleGridChange(e, 'Y')} />
             </label>  
 

@@ -6,8 +6,8 @@ import GridBlock from './GridBlock'
 export default function Grid( { gridX, gridY, path } ) {
 
     const containerStyle = {
-        backgroundImage: `url(/images/mars_background.jpeg)`, 
-        backgroundPosition: 'center',
+        backgroundImage: `url(/images/mars.jpeg)`, 
+        backgroundSize: 'cover',
     }
 
     const gridStyle = {
