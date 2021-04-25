@@ -69,6 +69,9 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
 
 
             <h1> Mars Rover </h1>
+
+            <p style={{width:'70%', alignSelf: 'center'}}>Enter some instructions to make the mars rover move.  For example, try entering 'MMRMM'.  This will move the rover forward two squares, then turn it right, then move it another two squares.
+            </p>
             <h2>Plateau Extent</h2>
             <p style={{marginTop: '-10px', fontSize: '1rem'}}>(Maximum extent = 20)</p>
 
