@@ -2,6 +2,8 @@ This application is available on the web at:
 
 https://mars-rover-react.herokuapp.com/
 
+It is not intended as a full solution to the Mars Rover assignment.  Rather, it is an exploration of the optional creative section which allows a user to provide input over the internet, and to view the output graphically. 
+
 To install and run this application and run it locally:
 
     mkdir marsrover
