@@ -3,15 +3,22 @@ import '../css/Controls.css';
 
 
 
-export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, roverY, roverDir, setRoverX, setRoverY, setRoverDir} ) {
+export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, roverY, roverDir, setRoverX, setRoverY, setRoverDir, setInstructions, destination} ) {
 
     const handleGridChange = (e, coord) => {
         if(e.target.value === ""){
             // Do nothing here
         } else if(Number.isInteger(parseInt(e.target.value))) {
+            // Check that input does not exceed plateau limit
+            const extent = parseInt(e.target.value)
+
+            // Check that the extent does not exceed a limit of 20
+            if (extent > 20){
+                alert("The maximum x or y extent for the plateau is 20.")
+                return
+            }
             // Update the plateau X or Y value depending on the coord given
             coord === 'X'? setGridX(parseInt(e.target.value)) : setGridY(parseInt(e.target.value))
-            console.log(`The new grid ${coord} value is `, e.target.value)
         } else {
             console.log("Error occurred in setting Plateau X/Y value")
             alert("Plateau X/Y value must be a positive integer.")
@@ -24,11 +31,37 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
         } else if(Number.isInteger(parseInt(e.target.value))) {
             // Update the rover X or Y value depending on the coord given
             coord === 'X'? setRoverX(parseInt(e.target.value)) : setRoverY(parseInt(e.target.value))
-            console.log(`The new rover ${coord} value is `, e.target.value)
         } else {
             console.log("Error occurred in setting rover X/Y value")
             alert("Rover X/Y value must be a positive integer.")
         }
+    }
+
+    const handleRoverDirection = (e) => {
+        const direction = e.target.value.toUpperCase()
+        if(e.target.value === ""){
+            // Do nothing here
+        } else if (['N', 'S', 'E', 'W'].includes(direction)){
+            setRoverDir(direction)
+        } else {
+            console.log("Error occurred in setting rover direction")
+            alert("Rover direction must either be N, S, E or W")
+        }
+    }
+
+    const handleRoverInstructions = (e) => {
+        if(e.target.value === ""){
+            // Do nothing here
+            return
+        } 
+        const instructions = Array.from(e.target.value.toUpperCase())
+        instructions.map(instruction => {
+            if(!['M', 'L', 'R'].includes(instruction)){
+                alert("Rover instructions must only consist of M, L, or R (no spaces or other characters)")
+                return
+            }
+        setInstructions(instructions)
+        })
     }
 
     return (
@@ -53,8 +86,19 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
                 <input type="text" placeholder={roverY} onChange={(e) => handleRoverChange(e, 'Y')}/>
             </label>  
             <label> Direction:
-                <input type="text" placeholder={roverDir}  />
+                <input type="text" placeholder={roverDir}  onChange={(e) => handleRoverDirection(e)}/>
             </label>  
+
+            <h2>Rover Instructions</h2>
+            <p style={{marginTop: '0'}}>(M = Move, L = Left, R = Right))</p>
+            <label> Instructions:
+                <input type="text" placeholder={'MMLMRM'} onChange={(e) => handleRoverInstructions(e)} />
+            </label>
+
+            <h2>Rover Destination</h2>
+
+            <p>{destination[0]} {destination[1]} {destination[2]}</p>
+
         </div>
     )
 }
