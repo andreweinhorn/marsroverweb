@@ -6,6 +6,5 @@
 .container {
   display: flex;
   height: 100%;
-  background-color: red;
   width: 100%;
 }
