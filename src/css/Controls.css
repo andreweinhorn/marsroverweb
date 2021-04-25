@@ -10,3 +10,24 @@
 input {
     margin: 5px;
 }
+
+.user-instructions {
+    width: 80%;
+    align-self: center;
+    margin-top: 0px;
+    font-size: 0.9rem;
+    text-align: justify;
+    text-justify: newspaper;
+  }
+
+  .legend{
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .legend > *{
+      margin: 5px;
+  }

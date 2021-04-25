@@ -70,8 +70,8 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
 
             <h1> Mars Rover </h1>
 
-            <p style={{width:'70%', alignSelf: 'center'}}>Enter some instructions to make the mars rover move.  For example, try entering 'MMRMM'.  This will move the rover forward two squares, then turn it right, then move it another two squares.
-            </p>
+            <p className='user-instructions'>Enter some instructions to make the mars rover move.  For example, try entering 'MMRMM'.  This will move the rover forward two squares; then turn it 90 degrees to the right; then move it another two squares. You can also try changing the grid size and the origin of the rover. </p>
+            
             <h2>Plateau Extent</h2>
             <p style={{marginTop: '-10px', fontSize: '1rem'}}>(Maximum extent = 20)</p>
 
@@ -84,6 +84,7 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
 
 
             <h2>Rover Origin</h2>
+            
             <label> X Value:
                 <input type="text" placeholder={roverX} onChange={(e) => handleRoverChange(e, 'X')} />
             </label>
@@ -102,7 +103,14 @@ export default function Controls( {gridX, gridY, setGridX, setGridY, roverX, rov
 
             <h2>Rover Destination</h2>
 
-            <p>{destination[0]} {destination[1]} {destination[2]}</p>
+            <p style={{marginTop: '0px'}}>{destination[0]} {destination[1]} {destination[2]}</p>
+
+            <div className='legend'>
+                <div style={{width: '20px', height: '20px', borderRadius: '50%', backgroundColor: 'green'}}></div>
+                <p>Origin</p>
+                <div style={{width: '20px', height: '20px', borderRadius: '50%', backgroundColor: 'red'}}></div>
+                <p>Destination</p>
+            </div>
 
         </div>
     )
