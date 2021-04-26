@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../css/Grid.css';
 import GridBlock from './GridBlock'
 
@@ -34,11 +34,11 @@ export default function Grid( { gridX, gridY, path } ) {
                 // console.log(`The (${x}, ${y}) cell is included in path!`)
                 selected = true
                 if(path[0].equals([x,y])){
-                    console.log("The origin is at : ", x, y)
+                    // console.log("The origin is at : ", x, y)
                     origin = true
                 }
                 if(path[path.length - 1].equals([x,y])){
-                    console.log("The desination is at : ", x, y)
+                    // console.log("The desination is at : ", x, y)
                     destination = true
                 }
 
