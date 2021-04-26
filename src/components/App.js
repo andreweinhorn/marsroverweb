@@ -14,7 +14,6 @@ function App() {
   const [instructions, setInstructions] = useState([])
   const [path, setPath] = useState([[0,0], [2,1], [1,3]])
   const [destination, setDestination] = useState([0, 0, 'N'])
-  // const [path, setPath] = useState([])
 
   const move = (rover) => {
     if(rover.dir === "N"){rover.y +=1}
@@ -43,19 +42,21 @@ function App() {
     newPath.push([rover.x, rover.y])
 
     // Generating new path coordinatees
-    instructions.map(instruction => {
-      if(instruction === 'M'){
+
+    for(var i = 0; i < instructions.length; i++){
+      if(instructions[i] === 'M'){
         move(rover)
         if(rover.x < 0 || rover.x > gridX - 1 || rover.y < 0 || rover.y > gridY - 1){
           alert("You just drove your rover off the edge of the plateau!")
+          break
         }
         newPath.push([rover.x, rover.y])
-      } else if (instruction === 'R'){
+      } else if (instructions[i] === 'R'){
         turnRight(rover)
       } else {
         turnLeft(rover)
       }
-    })
+    }
 
     // Set the destination coordinates based on rovers final position
     setDestination([rover.x, rover.y, rover.dir])

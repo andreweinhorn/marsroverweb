@@ -20,18 +20,25 @@ input {
     text-justify: newspaper;
   }
 
-  .legend{
-      margin: 0px;
-      padding: 0px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-  }
+.legend{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-  .legend > *{
-      margin: 5px;
-  }
+.legend > *{
+    margin: 5px;
+}
 
-  input:focus::placeholder {
-    color: transparent;
-  }
+input:focus::placeholder {
+color: transparent;
+}
+
+.clear-button {
+    margin: 10px;
+    padding: 0px;
+    width: 30%;
+    align-self: center;
+}
